@@ -1,8 +1,7 @@
 # Makefile
+#require python2
 TF_INC = `python -c "import tensorflow; print(tensorflow.sysconfig.get_include())"`
-#TF_INC = /home/animaze/.conda/envs/python2/lib/python2.7/site-packages/tensorflow/include
-#TF_LIB = /home/animaze/.conda/envs/python2/lib/python2.7/site-packages/tensorflow 
-TF_LIB = /home/animaze/anaconda3/envs/python2/lib/python2.7/site-packages/tensorflow
+TF_LIB = `python -c "import tensorflow; print(tensorflow.sysconfig.get_lib())"`
 
 #ifndef CUDA_HOME
     CUDA_HOME = /usr/local/cuda
